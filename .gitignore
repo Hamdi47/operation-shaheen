@@ -1,0 +1,68 @@
+# ===== Build Artifacts =====
+*.o
+*.obj
+*.elf
+*.bin
+*.hex
+*.map
+*.d
+*.lst
+build/
+Debug/
+Release/
+
+# ===== STM32CubeIDE =====
+.settings/
+.cproject
+.project
+*.launch
+
+# ===== Python =====
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+.eggs/
+*.egg
+venv/
+env/
+.venv/
+
+# ===== Jupyter Notebooks =====
+.ipynb_checkpoints/
+
+# ===== Data (keep structure, but large files tracked separately) =====
+# Uncomment these if your data files get too large for Git:
+# *.csv
+# *.bin
+# *.log
+
+# ===== OS Files =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== IDE =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ===== KiCad =====
+*-backups/
+*.kicad_prl
+fp-info-cache
+
+# ===== Temporary =====
+tmp/
+temp/
+*.tmp
+
+# ===== Large binaries (use Git LFS for these) =====
+# *.mp4
+# *.mov
+# *.avi
+# *.zip
+# *.tar.gz
