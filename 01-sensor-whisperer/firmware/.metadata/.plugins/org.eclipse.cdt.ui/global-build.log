@@ -1,0 +1,98 @@
+01:53:49 **** Build of configuration Debug for project 01-sensor-whisperer ****
+make -j8 all 
+arm-none-eabi-gcc "../Startup/startup.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411CEUx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Startup/startup.d" -MT"Startup/startup.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411CEUx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "01-sensor-whisperer.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\UMS\work\STM32\01-sensor-whisperer\firmware\01-sensor-whisperer\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="01-sensor-whisperer.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-closer.o): in function `_close_r':
+(.text._close_r+0xc): warning: _close is not implemented and will always fail
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-closer.o): note: the message above does not take linker garbage collection into account
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-lseekr.o): in function `_lseek_r':
+(.text._lseek_r+0x10): warning: _lseek is not implemented and will always fail
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-lseekr.o): note: the message above does not take linker garbage collection into account
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-readr.o): in function `_read_r':
+(.text._read_r+0x10): warning: _read is not implemented and will always fail
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-readr.o): note: the message above does not take linker garbage collection into account
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-writer.o): in function `_write_r':
+(.text._write_r+0x10): warning: _write is not implemented and will always fail
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-writer.o): note: the message above does not take linker garbage collection into account
+Finished building target: 01-sensor-whisperer.elf
+ 
+arm-none-eabi-size  01-sensor-whisperer.elf 
+arm-none-eabi-objdump -h -S 01-sensor-whisperer.elf  > "01-sensor-whisperer.list"
+   text	   data	    bss	    dec	    hex	filename
+    812	      0	   1568	   2380	    94c	01-sensor-whisperer.elf
+Finished building: default.size.stdout
+ 
+Finished building: 01-sensor-whisperer.list
+ 
+02:01:00 **** Incremental Build of configuration Debug for project 01-sensor-whisperer ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411CEUx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411CEUx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc -o "01-sensor-whisperer.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\UMS\work\STM32\01-sensor-whisperer\firmware\01-sensor-whisperer\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="01-sensor-whisperer.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 01-sensor-whisperer.elf
+ 
+arm-none-eabi-size  01-sensor-whisperer.elf 
+arm-none-eabi-objdump -h -S 01-sensor-whisperer.elf  > "01-sensor-whisperer.list"
+   text	   data	    bss	    dec	    hex	filename
+    812	      0	   1568	   2380	    94c	01-sensor-whisperer.elf
+Finished building: default.size.stdout
+ 
+Finished building: 01-sensor-whisperer.list
+ 
+02:10:52 **** Incremental Build of configuration Debug for project 01-sensor-whisperer ****
+make -j8 all 
+arm-none-eabi-size  01-sensor-whisperer.elf 
+   text	   data	    bss	    dec	    hex	filename
+    812	      0	   1568	   2380	    94c	01-sensor-whisperer.elf
+Finished building: default.size.stdout
+ 
+02:13:54 **** Incremental Build of configuration Debug for project 01-sensor-whisperer ****
+make -j8 all 
+arm-none-eabi-size  01-sensor-whisperer.elf 
+   text	   data	    bss	    dec	    hex	filename
+    812	      0	   1568	   2380	    94c	01-sensor-whisperer.elf
+Finished building: default.size.stdout
+ 
+02:32:40 **** Incremental Build of configuration Debug for project 01-sensor-whisperer ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411CEUx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "01-sensor-whisperer.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\UMS\work\STM32\01-sensor-whisperer\firmware\01-sensor-whisperer\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="01-sensor-whisperer.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 01-sensor-whisperer.elf
+ 
+arm-none-eabi-size  01-sensor-whisperer.elf 
+arm-none-eabi-objdump -h -S 01-sensor-whisperer.elf  > "01-sensor-whisperer.list"
+   text	   data	    bss	    dec	    hex	filename
+    812	      0	   1568	   2380	    94c	01-sensor-whisperer.elf
+Finished building: default.size.stdout
+ 
+Finished building: 01-sensor-whisperer.list
+ 
+02:33:34 **** Incremental Build of configuration Debug for project 01-sensor-whisperer ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411CEUx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "01-sensor-whisperer.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\UMS\work\STM32\01-sensor-whisperer\firmware\01-sensor-whisperer\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="01-sensor-whisperer.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 01-sensor-whisperer.elf
+ 
+arm-none-eabi-size  01-sensor-whisperer.elf 
+arm-none-eabi-objdump -h -S 01-sensor-whisperer.elf  > "01-sensor-whisperer.list"
+   text	   data	    bss	    dec	    hex	filename
+    812	      0	   1568	   2380	    94c	01-sensor-whisperer.elf
+Finished building: default.size.stdout
+ 
+Finished building: 01-sensor-whisperer.list
+ 
+02:34:14 **** Incremental Build of configuration Debug for project 01-sensor-whisperer ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411CEUx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "01-sensor-whisperer.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\UMS\work\STM32\01-sensor-whisperer\firmware\01-sensor-whisperer\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="01-sensor-whisperer.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 01-sensor-whisperer.elf
+ 
+arm-none-eabi-size  01-sensor-whisperer.elf 
+arm-none-eabi-objdump -h -S 01-sensor-whisperer.elf  > "01-sensor-whisperer.list"
+   text	   data	    bss	    dec	    hex	filename
+    812	      0	   1568	   2380	    94c	01-sensor-whisperer.elf
+Finished building: default.size.stdout
+ 
+Finished building: 01-sensor-whisperer.list
+ 
